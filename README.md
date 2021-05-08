@@ -1,0 +1,1 @@
+Electron app for visualizing Discord voice-chat transcriptions

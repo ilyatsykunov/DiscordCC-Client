@@ -1,0 +1,23 @@
+{
+  "name": "discordcc-client",
+  "version": "1.0.0",
+  "description": "Electron app for visualizing Discord voice-chat transcriptions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron --enable-transparent-visuals --disable-gpu .",
+    "buildwin": "electron-packager . DCC --platform='win32' --asar",
+    "buildlinux": "electron-packager . DCC --platform='linux' --asar",
+    "buildall": "electron-packager . DCC --all --asar"
+  },
+  "author": "Ilya Tsykunov",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.3.0",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pubnub": "^4.29.11"
+  }
+}

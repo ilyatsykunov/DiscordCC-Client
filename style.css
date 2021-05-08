@@ -1,0 +1,187 @@
+body {
+    pointer-events: none;
+}
+* {
+    pointer-events: none;
+}
+.draggable {
+    -webkit-app-region: drag;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.maincolumn {
+    display: grid;
+}
+
+.user {
+    width: auto;
+    height: auto;
+    overflow: auto;
+}
+
+.userPic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+     -webkit-box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.5);
+             box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.5);
+}
+
+.userPic.active {
+    background: rgb(0, 255, 0);
+}
+
+.userPic.inactive {
+    background: rgb(255, 255, 255);
+}
+
+.userPic.left {
+    margin-right: 15px;
+}
+
+.userPic.right {
+    margin-left: 15px;
+}
+
+.userName {
+    color: #000000;
+    text-shadow:
+        3px 3px 0 #ffffff,
+        -1px -1px 0 #ffffff,  
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+}
+
+.userSideContainer {
+    min-width: auto;
+    display: grid;
+}
+
+.userMsgList {
+    min-width: auto;
+}
+
+/* Top most message */
+.userMsgList .userMsg:nth-child(1) {
+    width: 200px; 
+}
+
+.userMsgList.left .userMsg:nth-child(1)::after {
+    height: 20px;
+    width:  20px;
+    position: absolute;
+    display: block;
+    content: '';
+    top:0;
+    left: -5px;
+    transform:             rotate( 45deg );
+        -moz-transform:    rotate( 45deg );
+        -ms-transform:     rotate( 45deg );
+        -o-transform:      rotate( 45deg );
+        -webkit-transform: rotate( 45deg );
+    transform: skewX(30deg);
+
+    background-color: #ffffff;
+
+     -webkit-box-shadow: -3px -3px 6px -5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: -3px -3px 6px -5px rgba(0, 0, 0, 0.5);
+             box-shadow: -3px -3px 6px -5px rgba(0, 0, 0, 0.5);
+}
+
+.userMsgList.right .userMsg:nth-child(1)::after {
+    height: 20px;
+    width:  20px;
+    position: absolute;
+    display: block;
+    content: '';
+    top:0;
+    right: -5px;
+    transform:             rotate( -45deg );
+        -moz-transform:    rotate( -45deg );
+        -ms-transform:     rotate( -45deg );
+        -o-transform:      rotate( -45deg );
+        -webkit-transform: rotate( -45deg );
+    transform: skewX(-30deg);
+
+    background-color: #ffffff;
+
+     -webkit-box-shadow: 3px -3px 6px -5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 3px -3px 6px -5px rgba(0, 0, 0, 0.5);
+             box-shadow: 3px -3px 6px -5px rgba(0, 0, 0, 0.5);
+}
+
+.userMsgList .userMsg:nth-child(n+2) {
+    width: 200px;
+}
+
+.userMsgList .userMsg:last-child {
+    margin-bottom: 15px;
+}
+
+.userMsg {
+    height: auto;
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    margin: 3px;
+    word-break: break-word;
+    color: #000000;
+    float: inherit;
+    display: block;
+    clear: both;
+
+	-webkit-box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.5);
+	   -moz-box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.5);
+}
+
+.userMsg p {
+    padding: 5px;
+}
+
+@keyframes fadein {
+    0% {opacity:0;}
+    30% {opacity:1;}
+    60% {opacity:1;}
+    100% {opacity:0;}
+}
+    
+@-moz-keyframes fadein {
+    0% {opacity:0;}
+    30% {opacity:1;}
+    60% {opacity:1;}
+    100% {opacity:0;}
+}
+    
+@-webkit-keyframes fadein {
+    0% {opacity:0;}
+    30% {opacity:1;}
+    60% {opacity:1;}
+    100% {opacity:0;}
+}
+    
+@-o-keyframes fadein {
+    0% {opacity:0;}
+    30% {opacity:1;}
+    60% {opacity:1;}
+    100% {opacity:0;}
+}
+    
+@-ms-keyframes fadein {
+    0% {opacity:0;}
+    30% {opacity:1;}
+    60% {opacity:1;}
+    100% {opacity:0;}
+}
