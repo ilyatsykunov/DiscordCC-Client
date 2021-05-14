@@ -7,9 +7,9 @@ const config = require('./config.json');
 dotenv.config();
 let mainWindow = null;
 const pubnub = new PubNub({
-    publishKey: "pub-c-5eaaf65b-e640-4e31-9c09-e39f38676b66",
-    subscribeKey: "sub-c-50f20552-8502-11eb-88a7-4a59fc122af9",
-    secretKey: "sec-c-OWI5Njk1MjUtNjFmMC00YjI2LThkMWYtYWNhOWY3ZTM5ZDBj"
+    publishKey: "ADD PUBLISH KEY",
+    subscribeKey: "ADD SUBSCRIBE KEY",
+    secretKey: "ADD SECRET KEY"
 });
 pubnub.subscribe({
     channels: ['main']
